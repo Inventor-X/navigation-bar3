@@ -1,0 +1,120 @@
+/*importing all the required font styles*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+
+}
+::selection{
+    background: #E74C3C;
+    color: #ECF0F1;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header{
+    position: sticky;
+    top: 0;left: 0;
+    background:#ECF0F1;
+    display: flex;
+    align-items: center;
+    padding: 1rem 10%;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: bold;
+    font-size:3rem;
+    font-family: 'Dancing Script', cursive;
+
+}
+.logo2{
+    font-family: 'Dancing Script', cursive;
+    font-style: normal;
+    color:#E74C3C ;
+}
+.navbar{
+
+
+}
+.navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#2C3E50;
+
+}
+#menu-bar{
+    display: none;
+    cursor:pointer;
+}
+.contact-btn a {
+    font-size: 2rem;
+    color: #ECF0F1;
+    background: #E74C3C;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 0 1rem;
+}
+#contact-in-nav{
+    display: none;
+}
+.navbar a:hover{
+    color: #E74C3C;
+}
+.contact-btn a:hover{
+    background: #e95e50;
+
+}
+@media (max-width: 1200px) {
+    .header{
+        padding:  1rem 5%;
+    }
+}
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 778px) {
+    .navbar{
+        position: absolute;
+        top: 0;right: 0;
+        width: 30rem;
+        height: 100vh;
+        background: #ECF0F1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(105%);
+    }
+    .nav-active{
+        transform: translateX(0%);
+        box-shadow: 0 0 0 100vw rgba(44, 62, 80, 0.64);
+    }
+    .navbar a{
+        font-size: 2.5rem;
+        margin-top: 1rem;
+
+    }
+    #menu-bar{
+        position: absolute;
+        display: inline-block;
+        top: 25%;
+        right: 5%;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .contact-btn{
+        display: none;
+    }
+    #contact-in-nav{
+        margin-top: 1rem;
+        display: inline-block;
+    }
+}
